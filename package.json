@@ -1,0 +1,26 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "Data Structures, Algorithms, Code Challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint '**/*.js'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris-Bortel/data-structures-and-algorithms.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Chris-Bortel/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/Chris-Bortel/data-structures-and-algorithms#readme"
+}
