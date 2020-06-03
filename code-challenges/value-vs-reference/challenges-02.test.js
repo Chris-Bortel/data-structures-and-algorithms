@@ -54,10 +54,15 @@ const octavia = { fullName: 'Octavia Estelle Butler' };
 addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
-
+//procedural programming
+//this is also obj mutation
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
   obj.yearBorn = year;
+  
+  const octavia = { fullName: 'Octavia Estelle Butler' };
+  addBirthYearProperty(octavia, 1947);
+  console.log(octavia);
 };
 
 
