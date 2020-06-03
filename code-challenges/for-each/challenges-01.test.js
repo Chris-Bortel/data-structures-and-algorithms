@@ -17,7 +17,7 @@ const speaker = (message, callback) => {
   // Solution code here...
   return callback(message);
 };
-
+console.log('five');
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -41,7 +41,9 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  addNumbers.forEach((callback,times));
+ addValues.forEach((arr,num) => {
+    
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,8 +65,9 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  var newArray = [];
   createList.forEach(
-
+    
   )
 };
 
@@ -84,6 +87,20 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  const fizzbuzz = (arr) => {
+    // Solution code here...
+    let resultArr = [];
+    arr.forEach( value ) => {
+      if (value % 3 ){
+        resultArr.push('Fizz')
+      } else if (value % 5){
+        resultArr.push('Buzz')
+      } else if (value % 3 && value % 5) {
+        resultArr.push('Fizz Buzz')
+      } 
+      
+    }
+  };
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,7 +114,7 @@ Run your tests from the console: jest challenges-01.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
   test('It should return the message with all uppercase characters', () => {
     expect(speaker('hello 301 students!', greeting)).toStrictEqual('HELLO 301 STUDENTS!');
   });
@@ -110,7 +127,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
@@ -119,7 +136,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
