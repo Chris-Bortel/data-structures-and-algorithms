@@ -10,7 +10,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
-}
+  let powerArr = [];
+  arr.forEach((value) => {
+    powerArr.push(Math.pow(value, 3));
+  });
+  return powerArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -59,10 +64,6 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
   obj.yearBorn = year;
-  
-  const octavia = { fullName: 'Octavia Estelle Butler' };
-  addBirthYearProperty(octavia, 1947);
-  console.log(octavia);
 };
 
 
