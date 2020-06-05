@@ -22,6 +22,9 @@ console.log('five');
 CHALLENGE 2
 
 Write a function named addValues that takes in an array and a value and pushes the value into the array. This function does not need a return statement.
+//create function 
+//takes in two parameters(array, and value)
+//push the value into the array
 
 Then, write a function named addNumbers that takes in four arguments:
   - A number to be added to an array
@@ -44,6 +47,10 @@ const addNumbers = (num, arr, times, callback) => {
  addValues.forEach((arr,num) => {
     
   });
+  for(let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +144,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
