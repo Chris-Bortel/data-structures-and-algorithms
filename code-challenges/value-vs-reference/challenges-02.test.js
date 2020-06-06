@@ -26,6 +26,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
+  let stringCopy = str;
+  return `${stringCopy} The end.`;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,6 +45,8 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+  let copyFirstEl = arr[0];
+  arr.push(copyFirstEl);
 };
 
 /* ------------------------------------------------------------------------------------------------
