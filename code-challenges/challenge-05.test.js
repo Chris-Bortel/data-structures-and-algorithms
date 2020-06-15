@@ -74,6 +74,9 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  let words = arr.split('');
+  
+  return words;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -220,7 +223,7 @@ xdescribe("Testing challenge 1", () => {
   });
 });
 
-describe("Testing challenge 2", () => {
+xdescribe("Testing challenge 2", () => {
   test("It should return a list of shortening words", () => {
     expect(howMuchPencil("Welcome")).toStrictEqual([
       "Welcome",
@@ -238,7 +241,7 @@ describe("Testing challenge 2", () => {
   });
 });
 
-xdescribe("Testing challenge 3", () => {
+describe("Testing challenge 3", () => {
   test("It should return an array of individual letters", () => {
     expect(wordsToCharList("Gregor")).toStrictEqual([
       "G",
