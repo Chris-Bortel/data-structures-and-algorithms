@@ -37,10 +37,20 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  let $template = $("#template").html();
-  console.log($template);
-  // let appendStarWars = getDom.clone().appendTo('#template');
+  starWarsPeople.forEach(function (person){
+    let $template = $('#template').clone();
+    $template.find('h2').text(person.name);
+    $template.find('h3').text(person.height);
+    $template.find('p').text(person.eye_color);
+    $('main').append('section');
+  });
 };
+
+
+// $uniqueOpt = jQuery.uniqueSort($uniqueOpt)
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -75,7 +85,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 const wordsToCharList = (arr) => {
   // Solution code here...
   let words = arr.split('');
-  
+
   return words;
 };
 
@@ -118,7 +128,15 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  return result;
+  // input is recipe
+  //out put is array of strings
+recipe.ingredients.forEach(item){
+  let string1 = // Everything after the first space.
+  let string2 = //everything after teh second space. 
+  result.push(string2);
+
+}
+return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -214,7 +232,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-05.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe("Testing challenge 1", () => {
+describe("Testing challenge 1", () => {
   test("It should append the star wars people to the DOM", () => {
     templateWithJQuery();
     expect($("section:nth-child(2) h2").text()).toStrictEqual("Luke Skywalker");
@@ -223,7 +241,7 @@ xdescribe("Testing challenge 1", () => {
   });
 });
 
-xdescribe("Testing challenge 2", () => {
+describe("Testing challenge 2", () => {
   test("It should return a list of shortening words", () => {
     expect(howMuchPencil("Welcome")).toStrictEqual([
       "Welcome",
@@ -264,7 +282,7 @@ describe("Testing challenge 3", () => {
   });
 });
 
-xdescribe("Testing challenge 4", () => {
+describe("Testing challenge 4", () => {
   test("It should return a list of foods", () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual([
       "Gruffalo",
