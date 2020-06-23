@@ -53,7 +53,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  let regex = /([aeiouy])/i;
+  let regex = /([aeiou])/gi;
   let result = arr.filter((val) => {
     return val.match(regex);
   });
