@@ -442,7 +442,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe("Testing challenge 1", () => {
+describe("Testing challenge 1", () => {
   test("It should return an array of object instances with a key of author", () => {
     expect(mapCurrentEvents()[0].author).toStrictEqual("go");
   });
@@ -471,13 +471,13 @@ xdescribe("Testing challenge 1", () => {
   });
 });
 
-xdescribe("Testing challenge 2", () => {
+describe("Testing challenge 2", () => {
   test("It should return the length of the array", () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
-xdescribe("Testing challenge 3", () => {
+describe("Testing challenge 3", () => {
   test("It should return an array continaing the names of the characters", () => {
     expect(returnNames(starWarsData)).toStrictEqual([
       "Luke Skywalker",
@@ -496,25 +496,25 @@ describe("Testing challenge 4", () => {
   });
 });
 
-xdescribe("Testing challenge 5", () => {
+describe("Testing challenge 5", () => {
   test("It should return the total number of children", () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
-xdescribe("Testing challenge 6", () => {
+describe("Testing challenge 6", () => {
   test("It should return the average of the numbers in the array", () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
-xdescribe("Testing challenge 7", () => {
+describe("Testing challenge 7", () => {
   test("It should return a count of the prime numbers in the array", () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
 });
 
-xdescribe("Testing challenge 8", () => {
+describe("Testing challenge 8", () => {
   test("It should return any stats that match the input", () => {
     expect(extractStat("speed", snorlaxData.stats)).toStrictEqual({
       stat: { url: "https://pokeapi.co/api/v2/stat/6/", name: "speed" },
@@ -524,7 +524,7 @@ xdescribe("Testing challenge 8", () => {
   });
 });
 
-xdescribe("Testing challenge 9", () => {
+describe("Testing challenge 9", () => {
   test("It should return an array containing the names of the children", () => {
     expect(extractChildren(characters)).toStrictEqual([
       "Robb",
