@@ -281,6 +281,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let arrOfLetters = str.split("");
+  console.log(arrOfLetters);
+  let arrOfReversed = arrOfLetters.reduce((accumulator, value, idx) => {
+    return value + accumulator;
+  }, "");
+  return arrOfReversed;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -471,7 +477,7 @@ xdescribe("Testing challenge 2", () => {
   });
 });
 
-describe("Testing challenge 3", () => {
+xdescribe("Testing challenge 3", () => {
   test("It should return an array continaing the names of the characters", () => {
     expect(returnNames(starWarsData)).toStrictEqual([
       "Luke Skywalker",
@@ -484,7 +490,7 @@ describe("Testing challenge 3", () => {
   });
 });
 
-xdescribe("Testing challenge 4", () => {
+describe("Testing challenge 4", () => {
   test("It should return the string with the characters in reverse order", () => {
     expect(reversedString("Code 301")).toStrictEqual("103 edoC");
   });
