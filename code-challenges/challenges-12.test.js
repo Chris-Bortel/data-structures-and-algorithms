@@ -49,16 +49,14 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  let rowValues = new Array(cookieStores.length).fill(0);
-  let columnValues = new Array(hoursOpen.length).fill(0);
-
-  for (let i = 0; i <= cookieStores.length - 1; i++) {
-    for (let j = 0; j <= hoursOpen.length - 1; j++) {
-      (stores = cookieStores[i]), hoursOpen[j];
-      rowValues[i] += stores;
-      columnValues[j] += stores;
-    }
-  }
+  return stores[0].map(
+    (val, idx) =>
+      firstPike[idx] +
+      seaTac[idx] +
+      seattleCenter[idx] +
+      capHill[idx] +
+      alkiBeach[idx]
+  );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +66,6 @@ Pat has decided that he would also like to organize his data as objects containi
 
 Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
-Write a function named salesData that uses forEach to iterate over the hourlySales array and create an object for each hour. Return an array of the formatted data.
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
