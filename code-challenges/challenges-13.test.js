@@ -21,6 +21,7 @@ const $ = createSnippetWithJQuery(`
 
 const fixTheTypo = () => {
   // Solution code here...
+  console.log("fix this");
 };
 
 /* ------------------------------------------------------------------------------------------------
