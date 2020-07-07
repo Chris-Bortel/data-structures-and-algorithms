@@ -8,7 +8,10 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
   // Solution code here...
-
+  // require dependencies
+  // declare routes
+  // connect a favoritefoods route to a function that send an array // will need a push method
+  // make a 404 handler
   var server = app.listen(3301, function () {
     var port = server.address().port;
     console.log("Example app listening at port", port);
@@ -28,9 +31,28 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
+  //TODO: Struggling with setting up variables and know what arrays to declare
+  // need two loops, one to go through outer array and one to go through the inner arrays
+  // target = number
+  // input = outer array
+  let result = 0;
+
+  input.map((arr) => {
+    let targetValues = arr.filter((value) => {
+      if (target === value) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    result += targetValues.length;
+  });
+  return result;
   // Solution code here...
   // A way to iterate over the arrays
   // each iteration identify if current number is 5
+  //// if arr[i]=== 5 then increment counter up one
   // keep track of how many times we see the number 5 // counter variable
   // return the number of time that we see number 5
 };
