@@ -24,10 +24,15 @@ Write a function named count that, given an integer and an array of arrays, uses
 Note: You might need to use the same method more than once.
 
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
+
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
   // Solution code here...
+  // A way to iterate over the arrays
+  // each iteration identify if current number is 5
+  // keep track of how many times we see the number 5 // counter variable
+  // return the number of time that we see number 5
 };
 
 /* ------------------------------------------------------------------------------------------------
