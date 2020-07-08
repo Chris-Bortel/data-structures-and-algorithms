@@ -82,6 +82,8 @@ const totalSum = (input) => {
   });
   return totalSum;
 };
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
@@ -95,6 +97,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
