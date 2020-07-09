@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
@@ -8,10 +8,13 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
   // Solution code here...
-
+  // require dependencies
+  // declare routes
+  // connect a favoritefoods route to a function that send an array // will need a push method
+  // make a 404 handler
   var server = app.listen(3301, function () {
     var port = server.address().port;
-    console.log("Example app listening at port", port);
+    console.log('Example app listening at port', port);
   });
   return server;
 };
@@ -28,9 +31,28 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
+  //TODO: Struggling with setting up variables and know what arrays to declare
+  // need two loops, one to go through outer array and one to go through the inner arrays
+  // target = number
+  // input = outer array
+  let result = 0;
+
+  input.map((arr) => {
+    let targetValues = arr.filter((value) => {
+      if (target === value) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    result += targetValues.length;
+  });
+  return result;
   // Solution code here...
   // A way to iterate over the arrays
   // each iteration identify if current number is 5
+  //// if arr[i]=== 5 then increment counter up one
   // keep track of how many times we see the number 5 // counter variable
   // return the number of time that we see number 5
 };
@@ -45,13 +67,25 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
+
 const totalSum = (input) => {
   // Solution code here...
+  let totalSum = 0;
+  input.map(arr => {
+
+    const sumOfArr = arr.reduce((acc, cur) => {
+      acc += cur;
+      return acc; // allows accumulator to move from one el to the next
+    },0); // each time sumOfArr is completed store value outside of map in the totalSum variable
+
+    totalSum += sumOfArr;
+  });
+  return totalSum;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-
 Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
 
 This function should first remove any elements that are not numbers or are not divisible by five.
@@ -63,6 +97,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,54 +113,54 @@ For example, "C-3PO and Luke Skywalker".
 
 let starWarsData = [
   {
-    name: "Luke Skywalker",
-    height: "172",
-    mass: "77",
-    hair_color: "blond",
-    skin_color: "fair",
-    eye_color: "blue",
-    birth_year: "19BBY",
-    gender: "male",
+    name: 'Luke Skywalker',
+    height: '172',
+    mass: '77',
+    hair_color: 'blond',
+    skin_color: 'fair',
+    eye_color: 'blue',
+    birth_year: '19BBY',
+    gender: 'male',
   },
   {
-    name: "C-3PO",
-    height: "167",
-    mass: "75",
-    hair_color: "n/a",
-    skin_color: "gold",
-    eye_color: "yellow",
-    birth_year: "112BBY",
-    gender: "n/a",
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
+    gender: 'n/a',
   },
   {
-    name: "R2-D2",
-    height: "96",
-    mass: "32",
-    hair_color: "n/a",
-    skin_color: "white, blue",
-    eye_color: "red",
-    birth_year: "33BBY",
-    gender: "n/a",
+    name: 'R2-D2',
+    height: '96',
+    mass: '32',
+    hair_color: 'n/a',
+    skin_color: 'white, blue',
+    eye_color: 'red',
+    birth_year: '33BBY',
+    gender: 'n/a',
   },
   {
-    name: "Darth Vader",
-    height: "202",
-    mass: "136",
-    hair_color: "none",
-    skin_color: "white",
-    eye_color: "yellow",
-    birth_year: "41.9BBY",
-    gender: "male",
+    name: 'Darth Vader',
+    height: '202',
+    mass: '136',
+    hair_color: 'none',
+    skin_color: 'white',
+    eye_color: 'yellow',
+    birth_year: '41.9BBY',
+    gender: 'male',
   },
   {
-    name: "Leia Organa",
-    height: "150",
-    mass: "49",
-    hair_color: "brown",
-    skin_color: "light",
-    eye_color: "brown",
-    birth_year: "19BBY",
-    gender: "female",
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female',
   },
 ];
 
@@ -154,8 +189,8 @@ Run your tests from the console: jest challenges-10.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe("Testing challenge 1", () => {
-  const request = require("supertest");
+xdescribe('Testing challenge 1', () => {
+  const request = require('supertest');
 
   let server;
 
@@ -167,25 +202,25 @@ describe("Testing challenge 1", () => {
     server.close();
   });
 
-  test("responds to /hello", function testHello(done) {
-    request(server).get("/hello").expect(200, done);
+  test('responds to /hello', function testHello(done) {
+    request(server).get('/hello').expect(200, done);
   });
 
-  test("responds to /aboutme", function testAboutMe(done) {
-    request(server).get("/aboutme").expect(200, done);
+  test('responds to /aboutme', function testAboutMe(done) {
+    request(server).get('/aboutme').expect(200, done);
   });
 
-  test("responds to /favoritefoods", function testFavoriteFoods(done) {
-    request(server).get("/favoritefoods").expect(200, done);
+  test('responds to /favoritefoods', function testFavoriteFoods(done) {
+    request(server).get('/favoritefoods').expect(200, done);
   });
 
-  test("responds to /foo", function testNotFound(done) {
-    request(server).get("/foo").expect(404, done);
+  test('responds to /foo', function testNotFound(done) {
+    request(server).get('/foo').expect(404, done);
   });
 });
 
-describe("Testing challenge 2", () => {
-  test("It should return the number of times the input is in the nested arrays", () => {
+xdescribe('Testing challenge 2', () => {
+  test('It should return the number of times the input is in the nested arrays', () => {
     expect(
       count(5, [
         [1, 3, 5, 7, 9],
@@ -208,7 +243,7 @@ describe("Testing challenge 2", () => {
       ])
     ).toStrictEqual(0);
   });
-  test("It should work on empty arrays", () => {
+  test('It should work on empty arrays', () => {
     expect(
       count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []])
     ).toStrictEqual(4);
@@ -216,8 +251,8 @@ describe("Testing challenge 2", () => {
   });
 });
 
-describe("Testing challenge 3", () => {
-  test("It should add all the numbers in the arrays", () => {
+describe('Testing challenge 3', () => {
+  test('It should add all the numbers in the arrays', () => {
     const nums = [
       [1, 2, 3, 4, 5],
       [6, 7, 2, 4, 5, 7],
@@ -228,8 +263,8 @@ describe("Testing challenge 3", () => {
   });
 });
 
-describe("Testing challenge 4", () => {
-  test("It should return numbers divisible by five, then raise two to the power of the resulting numbers", () => {
+describe('Testing challenge 4', () => {
+  test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
     expect(
       divisibleByFiveTwoToThePower([
         [10, 20, 5, 4],
@@ -239,7 +274,7 @@ describe("Testing challenge 4", () => {
     ).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
   });
 
-  test("It should return an empty array if none of the numbers are divisible by five", () => {
+  test('It should return an empty array if none of the numbers are divisible by five', () => {
     expect(
       divisibleByFiveTwoToThePower([
         [1, 2, 3],
@@ -248,34 +283,34 @@ describe("Testing challenge 4", () => {
     ).toStrictEqual([[], [32, 1024, 32768]]);
   });
 
-  test("It should return an empty array if the values are not numbers", () => {
+  test('It should return an empty array if the values are not numbers', () => {
     expect(
       divisibleByFiveTwoToThePower([
-        ["one", "two", "five"],
-        ["5", "10", "15"],
+        ['one', 'two', 'five'],
+        ['5', '10', '15'],
         [5],
       ])
     ).toStrictEqual([[], [], [32]]);
   });
 });
 
-xdescribe("Testing challenge 5", () => {
-  test("It should return only characters that are male or female", () => {
+xdescribe('Testing challenge 5', () => {
+  test('It should return only characters that are male or female', () => {
     expect(findMaleAndFemale(starWarsData)).toStrictEqual(
-      "Luke Skywalker and Darth Vader and Leia Organa"
+      'Luke Skywalker and Darth Vader and Leia Organa'
     );
     expect(
       findMaleAndFemale([
-        { name: "person", gender: "female" },
-        { gender: "lol" },
-        { name: "persontwo", gender: "male" },
+        { name: 'person', gender: 'female' },
+        { gender: 'lol' },
+        { name: 'persontwo', gender: 'male' },
       ])
-    ).toStrictEqual("person and persontwo");
+    ).toStrictEqual('person and persontwo');
   });
 });
 
-xdescribe("Testing challenge 6", () => {
-  test("It should return the name of the shortest character", () => {
-    expect(findShortest(starWarsData)).toStrictEqual("R2-D2");
+xdescribe('Testing challenge 6', () => {
+  test('It should return the name of the shortest character', () => {
+    expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });
 });
