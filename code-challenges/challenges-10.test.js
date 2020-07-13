@@ -8,10 +8,27 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
   // Solution code here...
-  // require dependencies
-  // declare routes
-  // connect a favoritefoods route to a function that send an array // will need a push method
-  // make a 404 handler
+  const express = require('express');
+  const app = express();
+
+  app.get('/hello', (request, response) => {
+    response.status(200).send('Davee - pronoun bro');
+  });
+
+  app.get('/aboutme', (request, response) => {
+    response.status(200).send('hello');
+  });
+
+  app.get('/favoritefoods', (request, response) => {
+    let foods = ['sushi', 'pizza'];
+    response.status(200).send(foods);
+  });
+
+  app.get('*', (request, response) => {
+    response.status(404).send('Route not found');
+  });
+
+
   var server = app.listen(3301, function () {
     var port = server.address().port;
     console.log('Example app listening at port', port);
@@ -88,17 +105,57 @@ const totalSum = (input) => {
 CHALLENGE 4
 Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
 
+
+
+
+
+
 This function should first remove any elements that are not numbers or are not divisible by five.
 
+
+
+
+
+
 This function should then raise 2 to the power of the resulting numbers, returning an array of arrays.
+
+
+
+
+
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-  
+  // need to loop of the outer array
+  // Make new array and then push the arrays that are divisible by 5
+  //// Will need to use filter
+
+  // Map over that array and return 2 arrays to the power of
+
+  // Solution code here...
+  return input.map(arr => arr.filter(value => (typeof value === 'number' && value % 5 === 0))).map(arr => arr.map(value => Math.pow(2, value)));
+
+
+
+
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stetch Goal
@@ -189,7 +246,7 @@ Run your tests from the console: jest challenges-10.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   const request = require('supertest');
 
   let server;
@@ -219,7 +276,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the number of times the input is in the nested arrays', () => {
     expect(
       count(5, [
