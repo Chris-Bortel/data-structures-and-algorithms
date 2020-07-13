@@ -75,7 +75,28 @@ Here is sample data for the 9:00 sales: { sales: '88 cookies', time: '9 a.m.' }.
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let finalArray = [];
+  let counter = 0;
+
+  // function Object (sales , time) {
+  //   this.sales = `${sales} cookies`
+  //   this.time = time
+  // };
+
+  hours.forEach(hour =>{
+    let Object = {sales: `${data[counter]} cookies`, time: `${hour}` };
+    // let result = new Object(data[counter],hour)
+    counter++;
+    finalArray.push(Object);
+  });
+
+  return finalArray;
+
+
+
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -112,6 +133,7 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
