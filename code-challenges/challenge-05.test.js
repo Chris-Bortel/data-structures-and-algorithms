@@ -37,12 +37,14 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  starWarsPeople.forEach(function (person){
-    let $template = $('#template').clone();
-    $template.find('h2').text(person.name);
-    $template.find('h3').text(person.height);
-    $template.find('p').text(person.eye_color);
-    $('main').append('section');
+  starWarsPeople.forEach(value => {
+    let i = $('#template').html();
+    const $section = $("<section></section>");
+    $section.html(i);
+    $section.find("h2").text(value.name);
+    $section.find("h3").text(value.height);
+    $section.find("p").text(value.eye_color);
+    $('main').append($section);
   });
 };
 
