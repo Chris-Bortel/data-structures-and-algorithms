@@ -125,19 +125,19 @@ const gruffaloCrumble = {
   ],
 };
 
-const listFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  // input is recipe
-  //out put is array of strings
-recipe.ingredients.forEach(item){
-  let string1 = // Everything after the first space.
-  let string2 = //everything after teh second space. 
-  result.push(string2);
+// const listFoods = (recipe) => {
+//   let result = [];
+//   // Solution code here...
+//   // input is recipe
+//   //out put is array of strings
+// recipe.ingredients.forEach(item){
+//   let string1 = // Everything after the first space.
+//   let string2 = //everything after teh second space. 
+//   result.push(string2);
 
-}
-return result;
-};
+// }
+// return result;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
