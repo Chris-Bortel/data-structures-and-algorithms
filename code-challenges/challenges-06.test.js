@@ -68,6 +68,13 @@ let $ = createSnippetWithJQuery(`
 
 const templatingWithMustache = () => {
   // Solution code here...
+  let array = [];
+  Object.values(characters).forEach(person => {
+    let $template = $('#template').html();
+    let rendered = Mustache.render($template, person);
+    array.push(rendered);
+  });
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,10 +111,8 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  let properties = Object.values(characters);
-  properties.forEach(arr => {
-    console.log(arr, characters[arr]);
-    houses.push(properties);
+  arr.forEach(obj => {
+    houses.push(obj.house);
   });
   return houses;
 };
@@ -125,7 +130,11 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
+  for (let i = 0; i < arr.length; i++) {
+    if (Object.values(arr[i]).includes(character)) {
+      return arr[i].children.length !== 0;
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,7 +194,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-06.test.js
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return html markup with the character', () => {
     const filledTemplates = templatingWithMustache();
     const $ = cheerio.load(filledTemplates[0]);
@@ -193,7 +202,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return the keys from an object', () => {
     expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
   });
@@ -206,7 +215,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
   });
