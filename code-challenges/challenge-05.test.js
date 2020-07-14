@@ -37,12 +37,14 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  starWarsPeople.forEach(function (person){
-    let $template = $('#template').clone();
-    $template.find('h2').text(person.name);
-    $template.find('h3').text(person.height);
-    $template.find('p').text(person.eye_color);
-    $('main').append('section');
+  starWarsPeople.forEach(value => {
+    let i = $('#template').html();
+    const $section = $("<section></section>");
+    $section.html(i);
+    $section.find("h2").text(value.name);
+    $section.find("h3").text(value.height);
+    $section.find("p").text(value.eye_color);
+    $('main').append($section);
   });
 };
 
@@ -129,14 +131,14 @@ const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
   // input is recipe
+  let list = recipe.ingredients;
   //out put is array of strings
-recipe.ingredients.forEach(item){
-  let string1 = // Everything after the first space.
-  let string2 = //everything after teh second space. 
-  result.push(string2);
-
-}
-return result;
+  list.forEach(item => {
+    console.log(item);
+    let name = item.slice(item.indexOf(' ', item.indexOf(' ') +1 ) +1 );
+    result.push(name);
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
