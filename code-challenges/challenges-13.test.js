@@ -67,7 +67,7 @@ const standardizePhoneNumbers = (arr) => {
 CHALLENGE 5 - Stretch Goal
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
-
+sdfsdf
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
