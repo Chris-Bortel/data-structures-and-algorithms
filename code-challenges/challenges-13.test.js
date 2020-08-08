@@ -237,7 +237,7 @@ describe("Testing challenge 4", () => {
   });
 });
 
-describe("Testing challenge 5", () => {
+xdescribe("Testing challenge 5", () => {
   test("It should only return the odd indexed characters from the string", () => {
     expect(onlyOddChars("0123456789")).toStrictEqual("13579");
     expect(onlyOddChars("abcd")).toStrictEqual("bd");
@@ -246,7 +246,7 @@ describe("Testing challenge 5", () => {
   });
 });
 
-describe("Testing challenge 6", () => {
+xdescribe("Testing challenge 6", () => {
   test("It should correctly assess whether all the strings are happy", () => {
     const words = [
       "things",
@@ -264,7 +264,7 @@ describe("Testing challenge 6", () => {
   });
 });
 
-describe("Testing challenge 7", () => {
+xdescribe("Testing challenge 7", () => {
   test("It should find all the strings that contain a given string", () => {
     const words = [
       "things",
@@ -282,7 +282,7 @@ describe("Testing challenge 7", () => {
   });
 });
 
-describe("Testing challenge 8", () => {
+xdescribe("Testing challenge 8", () => {
   test("It should determine whether all the strings contain a given string", () => {
     const words = [
       "things",
@@ -298,7 +298,7 @@ describe("Testing challenge 8", () => {
   });
 });
 
-describe("Testing challenge 9", () => {
+xdescribe("Testing challenge 9", () => {
   test("It should remove Brook from all courses", () => {
     const roster = [
       ["Michelle", "Allie", "Brook TESTING"],
@@ -318,7 +318,7 @@ describe("Testing challenge 9", () => {
   });
 });
 
-describe("Testing challenge 10", () => {
+xdescribe("Testing challenge 10", () => {
   test("It should sort events by the day on which they happen", () => {
     const events = [
       "Dancing on Mondays and Tuesdays",
@@ -368,7 +368,7 @@ describe("Testing challenge 10", () => {
   });
 });
 
-describe("Testing challenge 11", () => {
+xdescribe("Testing challenge 11", () => {
   test("It should return the ith character of the ith string", () => {
     const words = ["apple", "banana", "cantaloupe"];
 
