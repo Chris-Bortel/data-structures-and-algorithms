@@ -15,7 +15,6 @@ write three methods. Append that adds a new node to the tail node, and insertBef
 - Brendon Hampton
 - Joe Penncock
 
-![](linked-lists-lap-06.png)
 ![](ll-insertions.png)
 ## API
 <!-- Description of each method publicly available to your Linked List -->

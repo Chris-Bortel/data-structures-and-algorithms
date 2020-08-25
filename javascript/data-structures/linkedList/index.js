@@ -21,19 +21,3 @@ console.log('This is my constucted list:', list);
 list.insertBefore(3, 'this is my before value');
 
 list.insertAfter(12, 'after 12');
-
-//   insertBefore(value, newVal) {
-//     let current = this.head;
-//     let previous;
-//     while (current.next) {
-//       if (current.value === value) {
-//         let node = new Node(newVal);
-//         node.next = previous.next;
-//         previous.next = node;
-//         console.log('previous: ', previous);
-//         return this;
-//       }
-//       previous = current;
-//       current = current.next;
-//     }
-//   }
