@@ -9,27 +9,33 @@ class LinkedList{
 
   // Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
   // includes
+  append(value) {
+    let node = new Node(value);
 
-  // insert method 
-  insert(insertValue) {
-    let node = new Node(insertValue);
-
-    node.next = this.head;
-    //new instance of the node constructor that I am bringing in
-    this.head = node;
-
-    return this.head;
+    if (!this.head) {
+      this.head = node;
+    } else {
+      let current = this.head;
+      while(current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+    return this;
   }
 
 
-  // Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+  // insert method
+  insert(value) {
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    return this.head;
+  }
 
-  // includes method loops through the values that I have inserted
   includes(findValue) {
     let current = this.head;
-    // checking to see if the current node does not equal null
     while (current != null) {
-
       if(current.value === findValue) {
         console.log(true);
         return true;
@@ -40,7 +46,6 @@ class LinkedList{
     return false;
   }
 
-  // Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
   toString() {
     let current = this.head;
     let string = '';
@@ -56,8 +61,29 @@ class LinkedList{
     }
     console.log(string);
   }
-
 }
+
+//   insertBefore(value) {
+//   let current = this.head;
+//   let priorNode;
+
+//   //   node.next = this.head;
+//   //   //new instance of the node constructor that I am bringing in
+//   //   this.head = node;
+
+//   //   return this.head;
+//   // }
+
+//   // insertAfter() {
+
+//   // }
+
+
+
+//   // Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
+
+
+// }
 
 module.exports = LinkedList;
 
