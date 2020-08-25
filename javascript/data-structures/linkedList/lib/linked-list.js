@@ -7,8 +7,6 @@ class LinkedList{
     this.head = null;
   }
 
-  // Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-  // includes
   append(value) {
     let node = new Node(value);
 
@@ -24,35 +22,10 @@ class LinkedList{
     return this;
   }
 
-  // insert method
-  insert(value) {
-    let node = new Node(value);
-    node.next = this.head;
-    this.head = node;
-    return this.head;
-  }
-
-  insertBefore(value, newVal) {
-    let current = this.head;
-    let previous;
-    while (current.next) {
-      if (current.value === value) {
-
-        let node = new Node(newVal);
-        node.next = previous.next;
-        previous.next = node;
-        console.log('previous node: ', previous);
-        return this;
-      }
-      previous = current;
-      current = current.next;
-    }
-  }
-
   includes(findValue) {
     let current = this.head;
     let result = findValue;
-    while (current != null) {
+    while (current !== null) {
       if (current.value === findValue) {
         console.log(result, 'is in the linked list');
         return true;
@@ -79,16 +52,45 @@ class LinkedList{
     console.log(string);
   }
 
+  insert(value) {
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    return this.head;
+  }
 
+  insertBefore(value, newValue) {
+    let current = this.head;
+    let previous;
+
+    while (current.next) {
+      if (current.value === value) {
+        let node = new Node(newValue);
+        node.next = previous.next;
+        previous.next = node;
+        console.log('previous node: ', previous);
+        return this;
+      }
+      previous = current;
+      current = current.next;
+    }
+  }
+
+  insertAfter (value, newValue) {
+    let current = this.head;
+
+    while (current.next) {
+      if (current.value === value) {
+        let node = new Node(newValue);
+        let nextNode = current.next;
+        current.next = node;
+        node.next = nextNode;
+        console.log('after node', node.next);
+        return this;
+      }
+      current = current.next;
+    }
+  }
 }
 
-
-
-
-
-
-
 module.exports = LinkedList;
-
-
-
