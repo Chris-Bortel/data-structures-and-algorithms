@@ -35,14 +35,15 @@ class LinkedList{
 
   includes(findValue) {
     let current = this.head;
+    let result = findValue;
     while (current != null) {
       if(current.value === findValue) {
-        console.log(true);
+        console.log(result, 'is in the linked list');
         return true;
       }
       current = current.next;
     }
-    console.log(false);
+    console.log(result, 'is in the linked list');
     return false;
   }
 
