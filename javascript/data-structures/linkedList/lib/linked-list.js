@@ -16,14 +16,13 @@ class LinkedList{
       this.head = node;
     } else {
       let current = this.head;
-      while(current.next) {
+      while (current.next) {
         current = current.next;
       }
       current.next = node;
     }
     return this;
   }
-
 
   // insert method
   insert(value) {
@@ -33,11 +32,28 @@ class LinkedList{
     return this.head;
   }
 
+  insertBefore(value, newVal) {
+    let current = this.head;
+    let previous;
+    while (current.next) {
+      if (current.value === value) {
+
+        let node = new Node(newVal);
+        node.next = previous.next;
+        previous.next = node;
+        console.log('previous node: ', previous);
+        return this;
+      }
+      previous = current;
+      current = current.next;
+    }
+  }
+
   includes(findValue) {
     let current = this.head;
     let result = findValue;
     while (current != null) {
-      if(current.value === findValue) {
+      if (current.value === findValue) {
         console.log(result, 'is in the linked list');
         return true;
       }
@@ -51,40 +67,26 @@ class LinkedList{
     let current = this.head;
     let string = '';
 
-    while(current) {
+    while (current) {
       if (current !== null) {
         string = `${string} {${current.value}} -> `;
         current = current.next;
       }
       if (current === null) {
-        string = string + 'NULL';
+        string = `${string} ${null}`;
       }
     }
     console.log(string);
   }
+
+
 }
 
-//   insertBefore(value) {
-//   let current = this.head;
-//   let priorNode;
-
-//   //   node.next = this.head;
-//   //   //new instance of the node constructor that I am bringing in
-//   //   this.head = node;
-
-//   //   return this.head;
-//   // }
-
-//   // insertAfter() {
-
-//   // }
 
 
 
-//   // Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
 
 
-// }
 
 module.exports = LinkedList;
 
