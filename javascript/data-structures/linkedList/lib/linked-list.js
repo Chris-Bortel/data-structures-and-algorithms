@@ -7,8 +7,6 @@ class LinkedList{
     this.head = null;
   }
 
-  // Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-  // includes
   append(value) {
     let node = new Node(value);
 
@@ -16,7 +14,7 @@ class LinkedList{
       this.head = node;
     } else {
       let current = this.head;
-      while(current.next) {
+      while (current.next) {
         current = current.next;
       }
       current.next = node;
@@ -24,25 +22,17 @@ class LinkedList{
     return this;
   }
 
-
-  // insert method
-  insert(value) {
-    let node = new Node(value);
-    node.next = this.head;
-    this.head = node;
-    return this.head;
-  }
-
   includes(findValue) {
     let current = this.head;
-    while (current != null) {
-      if(current.value === findValue) {
-        console.log(true);
+    let result = findValue;
+    while (current !== null) {
+      if (current.value === findValue) {
+        console.log(result, 'is in the linked list');
         return true;
       }
       current = current.next;
     }
-    console.log(false);
+    console.log(result, 'is in the linked list');
     return false;
   }
 
@@ -50,42 +40,57 @@ class LinkedList{
     let current = this.head;
     let string = '';
 
-    while(current) {
+    while (current) {
       if (current !== null) {
         string = `${string} {${current.value}} -> `;
         current = current.next;
       }
       if (current === null) {
-        string = string + 'NULL';
+        string = `${string} ${null}`;
       }
     }
     console.log(string);
   }
+
+  insert(value) {
+    let node = new Node(value);
+    node.next = this.head;
+    this.head = node;
+    return this.head;
+  }
+
+  insertBefore(value, newValue) {
+    let current = this.head;
+    let previous;
+
+    while (current.next) {
+      if (current.value === value) {
+        let node = new Node(newValue);
+        node.next = previous.next;
+        previous.next = node;
+        console.log('previous node: ', previous);
+        return this;
+      }
+      previous = current;
+      current = current.next;
+    }
+  }
+
+  insertAfter (value, newValue) {
+    let current = this.head;
+
+    while (current.next) {
+      if (current.value === value) {
+        let node = new Node(newValue);
+        let nextNode = current.next;
+        current.next = node;
+        node.next = nextNode;
+        console.log('after node', node.next);
+        return this;
+      }
+      current = current.next;
+    }
+  }
 }
 
-//   insertBefore(value) {
-//   let current = this.head;
-//   let priorNode;
-
-//   //   node.next = this.head;
-//   //   //new instance of the node constructor that I am bringing in
-//   //   this.head = node;
-
-//   //   return this.head;
-//   // }
-
-//   // insertAfter() {
-
-//   // }
-
-
-
-//   // Define a method called toString (or __str__ in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
-
-
-// }
-
 module.exports = LinkedList;
-
-
-

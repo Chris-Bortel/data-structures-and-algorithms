@@ -1,4 +1,4 @@
-'use stict'; 
+'use stict';
 
 class Node {
   constructor(value) {

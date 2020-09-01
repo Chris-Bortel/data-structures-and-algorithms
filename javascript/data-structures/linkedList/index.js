@@ -17,3 +17,7 @@ list.includes(2);
 
 list.toString();
 console.log('This is my constucted list:', list);
+
+list.insertBefore(3, 'this is my before value');
+
+list.insertAfter(12, 'after 12');
