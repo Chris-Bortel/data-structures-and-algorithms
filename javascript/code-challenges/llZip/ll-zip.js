@@ -19,6 +19,7 @@ const zipLists = (linkedList1, linkedList2) => {
     l1Current = l1Temp;
     l2Current = l2Temp;
   }
+  l1Current.next = l2Current;
   console.log('line 22:::', linkedList1);
   return linkedList1;
 
