@@ -6,6 +6,11 @@ let list = new LinkedList();
 list.insert('cool value one');
 list.insert('not cool value one');
 list.insert(3);
+list.insert(10);
+list.insert(12);
+
+list.append(1);
+
 
 list.includes(3); // this should return true because it is in the list
 list.includes(2);
