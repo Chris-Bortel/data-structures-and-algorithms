@@ -1,9 +1,8 @@
 'use strict';
 
 let zipLists = require('../ll-zip.js');
-const Node = require('../../../data-structures/linkedList/lib/node.js');
 
-const LinkedList = require('../../../data-structures/linkedList/lib/linked-list.js');
+const LinkedList = require('../../../linkedList');
 
 let linkedList1 = new LinkedList();
 let linkedList2 = new LinkedList();

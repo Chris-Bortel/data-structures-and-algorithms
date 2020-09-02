@@ -1,10 +1,5 @@
 'use strict';
-// const Node = require('./node.js');
 
-// const LinkedList = require('../../data-structures/linkedList/lib/linked-list.js');
-
-// let list = new LinkedList();
-// // const zipList = 
 const zipLists = (linkedList1, linkedList2) => {
   let l1Temp;
   let l2Temp;
