@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('./node.js');
+const Node = require('./lib/node.js');
 
 class LinkedList{
   constructor() {
@@ -36,6 +36,7 @@ class LinkedList{
     return false;
   }
 
+  // This was code challenge 09
   toString() {
     let current = this.head;
     let string = '';
