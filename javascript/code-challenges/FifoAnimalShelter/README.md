@@ -1,6 +1,6 @@
-- Code Challenge 11 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/42)
+- Code Challenge 11 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/43)
 
-# Stacks and Queues
+# Fifo Animal Shelter
 
 <!-- Short summary or background information -->
 
@@ -8,11 +8,12 @@
 
 <!-- Description of the challenge -->
 
-Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
 
-- enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach.
-- dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach.
-  The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+-enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+
+- dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
 
 ## Approach & Efficiency
 
@@ -22,6 +23,6 @@ Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, thi
 
 <!-- Embedded whiteboard image -->
 
-![Queues with Stacks UML](./queues-with-stacks-uml.png)
+<!-- ![Fifo Animal Shelter]() -->
 
 ## Notes
