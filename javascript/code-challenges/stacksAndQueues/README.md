@@ -1,4 +1,4 @@
-- Code Challenge 10 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/39)
+- Code Challenge 10 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/41)
 
 ## Challenge
 
