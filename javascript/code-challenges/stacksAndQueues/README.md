@@ -12,14 +12,6 @@
 
 ## Collaborated
 
-<!--
-- Davee Sok
-- Diane Stephani
-- Joe Penncock
-- Ryan Geddes
-
-![](ll-zip.png) -->
-
 ## API
 
 <!-- Description of each method publicly available to your Linked List -->
