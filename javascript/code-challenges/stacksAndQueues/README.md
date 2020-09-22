@@ -12,6 +12,9 @@
 
 ## Collaborated
 
+- Brendan Hampton
+  ![](stack-and-queue.png)
+
 ## API
 
 <!-- Description of each method publicly available to your Linked List -->
