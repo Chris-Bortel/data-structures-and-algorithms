@@ -15,3 +15,5 @@ Code Challenge: class-05 [Linked List Implementation](data-structures/linkedList
 - Code Challenge: class-08 [ll-zip](data-structures/linkedList/README.md)
 
 - Code Challenge: class-09 [Linked List Implementation](code-challenges/llzip/README.md)
+
+- Code Challenge: class-10 [Stack and Queue](code-challenges/stacksAndQueues/README.md)
