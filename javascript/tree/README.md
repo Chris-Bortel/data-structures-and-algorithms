@@ -1,4 +1,4 @@
-- Code Challenge 15 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/42)
+- Code Challenge 15 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/47)
 
 # Implementation: Trees
 
