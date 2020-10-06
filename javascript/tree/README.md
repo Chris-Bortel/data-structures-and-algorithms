@@ -35,3 +35,7 @@
 ![find-max-binary](./find-maximum-binary-tree-uml.png)
 
 ## Notes
+
+## Collaboration
+
+Worked through the UML with Davee Sok, Edgar Romero, and Jonathan Lee
