@@ -2,11 +2,15 @@
 
 ## Language: `JavaScript`
 
-Code Challenge: Class-01: [Array Reverse](code-challenges/array-reverse/reverse/README.md)
-Code Challenge: Class-02:
-Code Challenge: Class-03: [Array Binary Sort](code-challenges/arrayBinarySearch/README.md)
-Code Challenge: Class-04:
-Code Challenge: class-05 [Linked List Implementation](data-structures/linkedList/README.md)
+- Code Challenge: Class-01: [Array Reverse](code-challenges/array-reverse/reverse/README.md)
+
+- Code Challenge: Class-02:
+
+- Code Challenge: Class-03: [Array Binary Sort](code-challenges/arrayBinarySearch/README.md)
+
+- Code Challenge: Class-04:
+
+- Code Challenge: class-05 [Linked List Implementation](data-structures/linkedList/README.md)
 
 - Code Challenge: class-06 [Linked List Implementation](data-structures/linkedList/README.md)
 
@@ -17,3 +21,11 @@ Code Challenge: class-05 [Linked List Implementation](data-structures/linkedList
 - Code Challenge: class-09 [Linked List Implementation](code-challenges/llzip/README.md)
 
 - Code Challenge: class-10 [Stack and Queue](code-challenges/stacksAndQueues/README.md)
+
+- Code Challenge: class-11 [Queue With Stacks](code-challenges/queue-with-stacks.js/README.md)
+
+- Code Challenge: class-12 [FIFO Animal Shelter](code-challenges/FifoAnimalShelter/README.md)
+
+- Code Challenge: class-13 [Multi-bracket Validation](code-challenges/multi-bracket-validation.js/README.md)
+
+- Code Challenge: class-15 [Binary Tree and BST Implementation](tree/README.md)
