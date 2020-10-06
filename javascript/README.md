@@ -29,3 +29,7 @@
 - Code Challenge: class-13 [Multi-bracket Validation](code-challenges/multi-bracket-validation.js/README.md)
 
 - Code Challenge: class-15 [Binary Tree and BST Implementation](tree/README.md)
+
+- Code Challenge: class-16 [Find the Maximum Value in a Binary Tree](tree/README.md)
+
+- Code Challenge: class-17 [Breadth-first Traversal](tree/README.md)
