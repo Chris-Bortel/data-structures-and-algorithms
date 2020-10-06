@@ -75,6 +75,10 @@ class BinarySearchTree extends BinaryTree {
     // traverse and put node in the right spot
     const newNode = new Node(value);
 
+    if (this.root === null) {
+      return (this.root = newNode);
+    }
+
     const _traverse = (node) => {
       if (value < node.value) {
         if (!node.left) {
@@ -127,8 +131,9 @@ fourty.right = seventy;
 let tree = new BinaryTree(twenty);
 let searchTree = new BinarySearchTree();
 
-console.log(searchTree.add());
-
 console.log(tree.preOrder());
 console.log(tree.inOrder());
 console.log(tree.postOrder());
+
+console.log(searchTree.add(55));
+console.log(searchTree);
