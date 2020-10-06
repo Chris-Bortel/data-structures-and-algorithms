@@ -67,6 +67,45 @@ class BinaryTree {
   }
 }
 
+// // TODO: I will be writing that add function
+class BinarySearchTree extends BinaryTree {
+  add(value) {
+    // make a new node
+    // traverse and put node in the right spot
+    const newNode = new Node(value);
+
+    const _traverse = (node) => {
+      if (value < node.value) {
+        if (!node.left) {
+          node.left = newNode;
+          return newNode;
+        }
+        _traverse(node.left);
+      }
+      if (value > node.value) {
+        if (!node.right) {
+          node.right = newNode;
+          return newNode;
+        }
+        _traverse(node.right);
+      }
+    };
+  }
+
+  contains(value) {
+    while (this.root) {
+      if (this.root === value) return true;
+      if (value > this.root) {
+        this.root = this.right;
+      } else if (value < this.root) {
+        this.root = this.left;
+      } else {
+        return false;
+      }
+    }
+  }
+}
+
 let twenty = new Node(20);
 let twelve = new Node(12);
 let six = new Node(6);
@@ -85,20 +124,50 @@ thirtytwo.left = twentyfive;
 fourty.right = seventy;
 
 let tree = new BinaryTree(twenty);
+let searchTree = new BinarySearchTree();
+
+console.log(searchTree.add());
 
 console.log(tree.preOrder());
 console.log(tree.inOrder());
 console.log(tree.postOrder());
 // console.log(JSON.stringify(tree, undefined, 4));
 
-// // TODO: I will be writing that add function
-// class BinarySearchTree extends BinaryTree() {
-//   add(value) {
-//     // accepts a value, and adds a new node with that value in the correct location in the binary search tree
-//     // need to traverse through this thing
-//   }
+// add(value) {
+//   // make a new node
+//   // traverse and put node in the right spot
+//   const newNode = new Node(value);
 
-//   contains(value) {
-//     //accepts a value and returns a boolean telling us whether or not the value is in the tree at least once
+//   function _walk(node) {
+//     if(value < node.value) {
+//       if(!node.left) {
+//         node.left = newNode;
+//         return newNode;
+//       }
+//       _walk(node.left);
+//     }
+//     if(value > node.value) {
+//       if(!node.right) {
+//         node.right = newNode;
+//         return newNode;
+//       }
+//       _walk(node.right);
+//     }
 //   }
+// const _walk = (node) => {
+//   if(value < node.value) {
+//     if(!node.left) {
+//       node.left = newNode;
+//       return newNode;
+//     }
+//     _walk(node.left);
+//   }
+//   if(value > node.value) {
+//     if(!node.right) {
+//       node.right = newNode;
+//       return newNode;
+//     }
+//     _walk(node.right);
+//   }
+// };
 // }
