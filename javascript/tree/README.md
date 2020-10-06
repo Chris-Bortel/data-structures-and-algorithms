@@ -34,7 +34,15 @@
 
 <!-- Embedded whiteboard image -->
 
+## UML
+
+### FindMaximum Binary
+
 ![find-max-binary](./find-maximum-binary-tree-uml.png)
+
+### Breadth First
+
+![breadth-first](./breadth-first-uml.png)
 
 ## Notes
 
