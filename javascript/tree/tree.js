@@ -1,5 +1,6 @@
 "use strict";
 
+require("../code-challenges/stacksAndQueues/stacks-and-queues.js");
 // TODO: Retype the binary tree and then build the add function.
 class Node {
   constructor(value) {
