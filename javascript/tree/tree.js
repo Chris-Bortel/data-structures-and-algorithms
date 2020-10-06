@@ -31,8 +31,24 @@ class BinaryTree {
     return results;
   }
 
-  inOrder() {}
+  inOrder() {
+    let results = [];
 
+    const _traverse = (node) => {
+      if (node.left) {
+        _traverse(node.left);
+      }
+      results.push(node.value);
+      if (node.right) {
+        _traverse(node.right);
+      }
+    };
+
+    _traverse(this.root);
+    return results;
+  }
+
+  // PostOrder looks at the right side of the tree
   postOrder() {}
 }
 
@@ -56,6 +72,7 @@ fourty.right = seventy;
 let tree = new BinaryTree(twenty);
 
 console.log(tree.preOrder());
+console.log(tree.inOrder());
 // console.log(JSON.stringify(tree, undefined, 4));
 
 // // TODO: I will be writing that add function
