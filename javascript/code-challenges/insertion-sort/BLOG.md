@@ -1,12 +1,9 @@
 ## Insertion Sort
 
+[pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/53)
 Insertion sort is a  sorting algorithm that builds the sorted array one item(index) at a time. It is not efficient because each loop through has to compare every temp to the j
 
 temp is holding the value that is to be sorted
-
-
-
-
 
 ## pseudo
 
@@ -44,6 +41,7 @@ Few uniques:
 [5,12,7,5,5,7] [7]
 [5,7,12] [5]
 [5,5,7,12]
+[5,5,7,12]
 ...
 [5,5,5,7,7,12]
 
@@ -51,14 +49,3 @@ Nearly-sorted: it will go through all of them and then put 11 into a temp variab
 [2,3,5,7,13,11] [11]
 [2,3,5,7,11,13]
 ```
-
-
-<!-- 
-j will always be one index less than i
-
-8 is greater than 4 so we shift 8 to the right 
-
-While i is looping through
-we use temp to shift  i through arr.length
-
-Once i finds a v -->
