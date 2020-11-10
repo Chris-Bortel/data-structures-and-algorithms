@@ -1,5 +1,5 @@
 # Quick Sort -- A Blog
-
+[Pull Request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/55)
 ## What is quick sort anyway?
 
 Quick sort is an algorithm to sort given lists of elements. It takes really large problems, and then breaks it down in to smaller problems until they are small enough to solve it. 
