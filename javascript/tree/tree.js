@@ -70,10 +70,13 @@ class BinaryTree {
 
 // // TODO: I will be writing that add function
 class BinarySearchTree extends BinaryTree {
+  // make a new node
   add(value) {
-    // make a new node
-    // traverse and put node in the right spot
     const newNode = new Node(value);
+
+    if (this.root === null) {
+      return (this.root = newNode);
+    }
 
     const _traverse = (node) => {
       if (value < node.value) {
@@ -90,7 +93,9 @@ class BinarySearchTree extends BinaryTree {
         }
         _traverse(node.right);
       }
+      // traverse and put node in the right spot
     };
+    _traverse(this.root);
   }
 
   contains(value) {
@@ -127,8 +132,11 @@ fourty.right = seventy;
 let tree = new BinaryTree(twenty);
 let searchTree = new BinarySearchTree();
 
-console.log(searchTree.add());
-
 console.log(tree.preOrder());
 console.log(tree.inOrder());
 console.log(tree.postOrder());
+
+console.log(searchTree.add(55));
+console.log(searchTree.add(45));
+console.log(searchTree.add(65));
+console.log(searchTree);
