@@ -33,3 +33,7 @@
 - Code Challenge: class-16 [Find the Maximum Value in a Binary Tree](tree/README.md)
 
 - Code Challenge: class-17 [Breadth-first Traversal](tree/README.md)
+
+- Code Challenge: class-28 [Quick Sort](quicksort/BLOG.md)
+
+
