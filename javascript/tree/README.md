@@ -24,6 +24,8 @@
 
   - Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
+## Challenge FindMaximum Binary Tree
+
 ## Approach & Efficiency
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
