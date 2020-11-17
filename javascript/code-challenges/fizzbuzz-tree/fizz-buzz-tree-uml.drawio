@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e" modified="2020-10-13T02:40:46.580Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="6RRJzY5kbdewqmxuE78t" version="13.6.5">
+    <diagram id="s7CpuAstifdW_TrbpQUn" name="Page-1">
+        <mxGraphModel dx="887" dy="742" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#8A8A8A" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Fizz Buzz Tree Whiteboard" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="20" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="- Write a function called FizzBuzzTree that takes a k-ary tree&lt;br&gt;- function should return whether the each node value is divisible by 3, 5, or both&lt;br&gt;&lt;br&gt;- If value is divisible by 3 replace with the value with the string &quot;fizz&quot;&lt;br&gt;- If value is divisible by 5, replace the value with &quot;buzz&quot; &lt;br&gt;- If divisible by both, replace the value with &quot;fizzbuzz&quot;&lt;br&gt;- If value is not divisible by either, turn the number into a string&lt;br&gt;&lt;br&gt;- Return a new tree" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="49" width="380" height="171" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Root&lt;br&gt;5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Child&lt;br&gt;3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="360" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Child&lt;br&gt;7" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="360" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Child&lt;br&gt;15" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="360" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="k-ary = 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="280" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=none;html=1;entryX=-0.006;entryY=0.746;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="360" as="sourcePoint"/>
+                        <mxPoint x="140" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="6" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200" y="360" as="sourcePoint"/>
+                        <mxPoint x="250" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6" target="9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="300" as="sourcePoint"/>
+                        <mxPoint x="360" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Exception string" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="490" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="buzz" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="290" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="1. Create a node class (value)&lt;br&gt;2. Create a k-ary tree class&lt;br&gt;2. Create a fizzBuzzTree( k-ary tree)&lt;br&gt;3. Use the function to loop through the k-ary tree and evaluate whether the node values are divisible by the target values" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="40" width="230" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Require tree.js&lt;br&gt;&lt;br&gt;Class Node&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;constructor( value )&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this value = value&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this.parent = null&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; this. child = [ ]&amp;nbsp;&lt;br&gt;&lt;br&gt;function fizzBuzzTree ( value )&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;let node&amp;nbsp;= new Node( value and k )&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;this.root = node&lt;br&gt;&lt;br&gt;let tree = new Tree(' value'&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;" style="text;html=1;strokeColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="220" width="350" height="450" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
