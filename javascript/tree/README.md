@@ -34,7 +34,6 @@
 
 <!-- Embedded whiteboard image -->
 
-
 ### Find Max Binary Tree CC 16
 
 ![find-max-binary](./find-maximum-binary-tree-uml.png)
@@ -42,7 +41,6 @@
 ### Breadth First Tree CC 17
 
 ![breadth-first-tree](./breadth-first-uml.png)
-
 
 ## Notes
 

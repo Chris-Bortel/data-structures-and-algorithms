@@ -5,6 +5,16 @@
 
 It is a sorting algorithm that splits an array in half and sorts each half until the target is found
 
+### Merge sort steps
+
+- Slice the givven array into two halve that are as equal as they can be. 
+
+- Rinse and repeat until there are only single element arrays
+
+- Take the single element array and start merging them together so that they are in sortedsubarrays of two...
+
+- Keep doing this until we are returned a fully sorted array
+
 Pseudo Code
 ```
 ALGORITHM Mergesort(arr)
