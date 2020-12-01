@@ -38,4 +38,6 @@
 
 - Code Challenge: class-31 [Tree Intersection](quicksort/BLOG.md)
 
+- Code Challenge: class-32 [Left-Join](code-challenges/left-join/README.md)
+
 
