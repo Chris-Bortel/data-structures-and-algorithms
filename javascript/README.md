@@ -36,4 +36,6 @@
 
 - Code Challenge: class-28 [Quick Sort](quicksort/BLOG.md)
 
+- Code Challenge: class-31 [Tree Intersection](quicksort/BLOG.md)
+
 
