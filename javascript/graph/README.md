@@ -1,4 +1,4 @@
-- Code Challenge 11 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/60)
+- Code Challenge 11 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/61)
 
 # Graph Implementation
 
@@ -59,3 +59,4 @@ Ensure your tests are passing before you submit your solution.
 <!-- Embedded whiteboard image -->
 
 ## Notes
+[Reading To Reference](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/resources/graphs.html)
