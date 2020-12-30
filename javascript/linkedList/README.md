@@ -2,7 +2,7 @@
 <!-- Short summary or background information -->
 - Code Challenge 05 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/36)
 - Code Challenge 06 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/37)
-- Code Challenge 07 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/38)
+- Code Challenge 07 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/63)
 
 ## Challenge
 <!-- Description of the challenge -->

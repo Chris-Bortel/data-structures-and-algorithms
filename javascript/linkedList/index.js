@@ -92,6 +92,26 @@ class LinkedList{
       current = current.next;
     }
   }
+
+  kthFromEnd(k){
+    let current = this.head;
+    let arr = [];
+    while(current){
+      arr.push(current.value);
+      current = current.next;
+    }
+    return arr[arr.length -1 -k];
+  }
 }
+
+const ll = new LinkedList();
+ll.append(1);
+ll.append(2);
+ll.append(5);
+ll.append(4);
+ll.append(3);
+
+console.log(ll.kthFromEnd(2));
+
 
 module.exports = LinkedList;
