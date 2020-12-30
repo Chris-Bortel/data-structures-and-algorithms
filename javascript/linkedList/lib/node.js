@@ -1,4 +1,4 @@
-'use stict';
+'use strict';
 
 class Node {
   constructor(value) {

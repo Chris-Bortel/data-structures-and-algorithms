@@ -13,11 +13,8 @@ class LinkedList {
   }
 
   insert(value) {
-    // we give a new node 
+    // we give a new node
     let node = new Node(value);
-    // we say that if there is not a head, we will assign this.head a node
-    // if there is a head, we will traverse the list and 
-
     if(!this.head) {
       this.head = node;
     } else {
@@ -68,6 +65,43 @@ class LinkedList {
   }
 
 
-}
 
-module.exports = Node, LinkedList;
+  addBefore(newNode, target) {
+    let current = this.head;
+    let node = new Node(newNode);
+
+    if (this.head.value === target ) {
+      node.next = this.head;
+      this.head = node;
+      return this;
+    }
+    while (current) {
+      if (current.next.value === target) {
+        node.next = target;
+        current.next = node;
+      }
+      current = current.next;
+    }
+
+  }
+}
+let list = new LinkedList();
+
+list.insert(6);
+list.insert(7);
+list.insert(8);
+list.insert(9);
+
+list.addBefore(4,9);
+
+list.includes(4);
+
+console.log(JSON.stringify(list, null, 2));
+// console.log(list.insert(7));
+// console.log(list.insert(8));
+// console.log(list.insert(9));
+// console.log(list.addBefore(4,9));
+// console.log(list.includes(4));
+
+// module.exports = Node, LinkedList;
+
