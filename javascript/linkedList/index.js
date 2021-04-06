@@ -111,6 +111,8 @@ ll.append(5);
 ll.append(4);
 ll.append(3);
 
+ll.toString()
+
 console.log(ll.kthFromEnd(2));
 
 
