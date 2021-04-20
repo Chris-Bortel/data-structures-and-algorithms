@@ -31,7 +31,7 @@ class Stack {
       this.size --;
       let top = this.top;
       this.top = this.top.next;
-      return top.Value;
+      return top.value;
 
     } else {
       return 'exception';
