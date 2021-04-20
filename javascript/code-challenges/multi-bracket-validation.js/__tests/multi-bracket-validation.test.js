@@ -1,26 +1,48 @@
-// 'use strict';
+'use strict';
+const multiBracketValidation = require('../multi-bracket-validation.js');
 
-// const Stack = require('../stacks-and-queues.js');
-// describe('Stacks and Queues tests', () => {
+describe('Proof of life test', () => {
+  it('Proof of life', () => {
+    expect(true).toBeTruthy();
+  });
+});
 
-//   it('can successfully push into a stack', () => {
-//     let stack = new Stack();
-//     stack.push(4);
-//     console.log('line 7 +++++++++++', stack);
-//     expect(stack.top.value).toBe(4);
-//   });
+describe('multiBracketValidation function should work for passing cases', () => {
+  it('Should pass for balanced brackets', () => {
+    let input = '{}(){}';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(true);
+  });
 
-//   it('can successfully pop from a stack', () => {
-//     let stack = new Stack();
-//     stack.push(2);
-//     stack.push(3);
-//     stack.push(4);
-//     stack.pop();
-//     console.log(stack);
-//     expect(stack.top.value).toBe(2);
-//   });
-// });
+  it('Should pass for balanced brackets', () => {
+    let input = '()[[Extra Characters]]';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(true);
+  });
 
+  it('Should pass for balanced brackets', () => {
+    let input = '{}{Code}[Fellows](())';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(true);
+  });
+});
 
+describe('multiBracketValidation function should work for failing cases', () => {
+  it('Should return false for unbalanced brackets', () => {
+    let input = '[({}]';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(false);
+  });
 
+  it('Should return false for unbalanced brackets', () => {
+    let input = '(](';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(false);
+  });
 
+  it('Should return false for unbalanced brackets', () => {
+    let input = '{(})';
+    let actual = multiBracketValidation(input);
+    expect(actual).toEqual(false);
+  });
+});

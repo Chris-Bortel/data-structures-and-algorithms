@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const zipLists = (linkedList1, linkedList2) => {
   let l1Temp;
@@ -15,9 +15,8 @@ const zipLists = (linkedList1, linkedList2) => {
     l2Current = l2Temp;
   }
   l1Current.next = l2Current;
-  console.log('line 22:::', linkedList1);
+  console.log(JSON.stringify(linkedList1, null, 2));
   return linkedList1;
-
 };
 
 module.exports = zipLists;

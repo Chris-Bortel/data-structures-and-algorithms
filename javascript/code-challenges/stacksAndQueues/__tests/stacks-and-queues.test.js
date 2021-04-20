@@ -1,16 +1,15 @@
-'use strict';
+"use strict";
 
-const Stack = require('../stacks-and-queues.js');
-describe('Stacks and Queues tests', () => {
-
-  it('can successfully push into a stack', () => {
+const Stack = require("../stacks-and-queues.js");
+describe("Stacks and Queues tests", () => {
+  it("can successfully push into a stack", () => {
     let stack = new Stack();
     stack.push(4);
-    console.log('line 7 +++++++++++', stack);
+    console.log("line 7 +++++++++++", stack);
     expect(stack.top.value).toBe(4);
   });
 
-  it('can successfully pop from a stack', () => {
+  it("can successfully pop from a stack", () => {
     let stack = new Stack();
     stack.push(2);
     stack.push(3);
@@ -19,8 +18,11 @@ describe('Stacks and Queues tests', () => {
     console.log(stack);
     expect(stack.top.value).toBe(2);
   });
+
+  // it('pop returns empty null, undefined with the stack is empty ', () => {
+  //   let stack = new Stack();
+  //   stack.pop();
+  //   console.log(stack);
+  //   expect(stack.top.value).toBe(null || undefined);
+  // });
 });
-
-
-
-

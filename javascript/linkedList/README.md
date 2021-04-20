@@ -2,7 +2,7 @@
 <!-- Short summary or background information -->
 - Code Challenge 05 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/36)
 - Code Challenge 06 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/37)
-- Code Challenge 07 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/38)
+- Code Challenge 07 [Pull request](https://github.com/Chris-Bortel/data-structures-and-algorithms/pull/63)
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -18,7 +18,15 @@ write three methods. Append that adds a new node to the tail node, and insertBef
 - Brendon Hampton
 - Joe Penncock
 
+
+## WhiteBoards
+
+## ll-insertions
 ![](ll-insertions.png)
+## kth from the end (Chris and Jonny)
+![](kth-from-the-end-whiteboard.png)
+## kth from the end (Jonny's Solution)
+![](jonny-kth-from-end.png)
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
