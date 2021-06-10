@@ -32,3 +32,17 @@ Using Separate Chaining
 - hashes the key
 - retrieves the key-value pair in the hash table
 - if value is not in the table, then return that it does not exist
+
+### Keys
+
+- loops through the hash table array and returns an array of keys in the table
+
+### Values
+
+Note: We will want to handle whether there are duplicates and how we want to return them
+
+- loops through the hash table array and returns an array of values in the table
+
+## TODO:
+
+- add a contains method
