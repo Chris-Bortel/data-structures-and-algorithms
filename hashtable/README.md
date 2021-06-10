@@ -12,3 +12,23 @@
 
 - Store one piece of data at each position and if there is a spot that is already taken, with search through the array to find the next empty slot
 - allows us to store a single key-value at each index
+
+## Methods of the HashTable Class
+
+Using Separate Chaining
+
+![Separate Chaining](./separateChaining.png)
+
+### Set
+
+- accepts a key and a value
+- hashes the key
+- stores the key-value pair in the hash table array via separate chaining
+  - stored in a nested structure
+
+### Get
+
+- accepts a key
+- hashes the key
+- retrieves the key-value pair in the hash table
+- if value is not in the table, then return that it does not exist
