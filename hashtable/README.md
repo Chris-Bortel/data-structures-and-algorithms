@@ -13,6 +13,8 @@
 - Store one piece of data at each position and if there is a spot that is already taken, with search through the array to find the next empty slot
 - allows us to store a single key-value at each index
 
+<br>
+
 ## Methods of the HashTable Class
 
 Using Separate Chaining
@@ -43,6 +45,26 @@ Note: We will want to handle whether there are duplicates and how we want to ret
 
 - loops through the hash table array and returns an array of values in the table
 
+<br>
+
+## Big O of Hash Tables (average case)
+
+- insert: o(1)
+- deletion:O(1)
+- access: O(1)
+
+### Good Hash
+
+![Good Hash](./goodHash.png)
+
+### Bad Hash
+
+![Bad Hash](./badHash.png)
+
+<br>
+
 ## TODO:
 
 - add a contains method
+- add tests
+- implement with a linked list
